@@ -10,4 +10,6 @@ urlpatterns=[
     url(r'^project/new$', views.new_project, name='post'),
     url(r'^project/(?P<project_id>[0-9])$',views.project,name='project'),
     url(r'^search/', views.search,name='search'),
+    url(r'^api/projects/$', views.ProjectList.as_view()),
+    url(r'^api/profiles/$', views.ProfileList.as_view()),
 ]
