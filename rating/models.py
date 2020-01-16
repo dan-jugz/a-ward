@@ -54,3 +54,13 @@ class Project(models.Model):
         projects = cls.objects.filter(title__icontains=search_term)
         return projects
     
+    
+class Profile(models.Model):
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    profilepic = models.ImageField(upload_to='profiles/')
+    bio = models.CharField(max_length=255)
+    prefname = models.CharField(max_length=255)
+    contact = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.prefname
