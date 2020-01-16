@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'award.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'award',
+        'NAME': 'haward',
         'USER': 'daniel',
     'PASSWORD':'watchlist',
     }
